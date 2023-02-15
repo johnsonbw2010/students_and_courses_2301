@@ -21,4 +21,18 @@ class Gradebook
     hash[class_2] = students_2
     hash
   end
+
+  def students_below(threshold)
+    new_arr = []
+    array_students = []
+      @courses.each do |course|
+        new_arr << course.students[0]
+      end
+      new_arr.each do |student|
+        if student.grade < threshold
+          array_students << student
+        end
+      end
+      array_students
+  end
 end

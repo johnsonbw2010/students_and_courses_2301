@@ -60,9 +60,9 @@ RSpec.describe Gradebook do
       student2.log_score(86)
       student2.log_score(82)
 
-      expect(students_below(87)).to eq([student2])
-      expect(students_below(84)).to eq([])
-      expect(students_below(88)).to eq([student1, student2])
+      expect(gradebook.students_below(87)).to eq([student2])
+      expect(gradebook.students_below(84)).to eq([])
+      expect(gradebook.students_below(88)).to eq([student1, student2])
     end
   end
 end

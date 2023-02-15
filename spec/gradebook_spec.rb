@@ -37,7 +37,6 @@ RSpec.describe Gradebook do
       course2.enroll(student2)
       gradebook.add_course(course1)
       gradebook.add_course(course2)
-      
       expect(gradebook.list_all_students['Geometry']).to eq([student1])
       expect(gradebook.list_all_students['Economics']).to eq([student2])
     end

@@ -8,4 +8,8 @@ class Course
     @capacity = capacity
     @students = []
   end
+
+  def full?
+    @students.size > @capacity
+  end
 end

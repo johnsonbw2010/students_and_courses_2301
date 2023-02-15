@@ -23,13 +23,14 @@ RSpec.describe Course do
     it 'can acknowledge when full' do
       course = Course.new('Calculus', 2)
       student1 = Student.new({name: 'Morgan', age: 21})
-      student2 = Student.new({name: 'Morgan', age: 21})
+      student2 = Student.new({name: 'Jordan', age: 29})
       course.enroll(student1)
       
       expect(course.full?).to eq(false)
 
       course.enroll(student2)
 
+      expect(course.students.size).to eq(2)
       expect(course.full?).to eq(true)
     end
   end

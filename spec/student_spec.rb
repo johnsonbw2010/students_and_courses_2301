@@ -17,12 +17,12 @@ RSpec.describe Student do
     it 'can log scores' do
     student = Student.new({:name => 'Morgan', :age => 21})
 
-    expect (student.scores).to eq([])
+    expect(student.scores).to eq([])
     
     student.log_score(89)
     student.log_score(78)
     
-    expect(student.scores).to eq[89, 87]
+    expect(student.scores).to eq([89, 78])
     end
   end
 end
